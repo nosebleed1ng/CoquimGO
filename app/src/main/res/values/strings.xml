@@ -2,4 +2,7 @@
     <string name="app_name">CoquimGO</string>
     <color name="morado">#9a0ca4</color>
     <color name="azulOscuro">#253f66</color>
+    <color name="grisClaro">#efefef</color>
+    <string name="textoPrincipal">Explora el mundo con nosotros</string>
+    <string name="iniciar">Iniciar</string>
 </resources>

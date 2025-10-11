@@ -5,4 +5,15 @@
     <color name="grisClaro">#efefef</color>
     <string name="textoPrincipal">Explora el mundo con nosotros</string>
     <string name="iniciar">Iniciar</string>
+    <string name="mapa">Mapa</string>
+    <string name="lugaresTuristicos">Lugares Turísticos</string>
+    <string name="lugaresVisitados">Lugares Visitados</string>
+    <string name="lugaresFavoritos">Lugares Favoritos</string>
+    <string name="configuracion">Configuración</string>
+    <string name="open_nav">Abrir menú</string>
+    <string name="close_nav">Cerrar menú</string>
+    <string name="favorito">Añadir a Favoritos</string>
+    <string name="visitado">Añadir a Visitados</string>
+    <string name="lugar_imagen">Imagen del lugar</string>
+
 </resources>

@@ -12,8 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CoquimGO">
         <activity
+            android:name=".InformacionLugarActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LugaresTuristicosActivity"
+            android:exported="true" />
+        <activity
             android:name=".SplashActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,9 +28,8 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"
+            />
     </application>
 
 </manifest>

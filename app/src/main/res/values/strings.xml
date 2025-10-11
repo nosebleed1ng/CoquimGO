@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CoquimGO</string>
+    <color name="morado">#9a0ca4</color>
+    <color name="azulOscuro">#253f66</color>
+</resources>

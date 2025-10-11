@@ -5,4 +5,9 @@
     <color name="grisClaro">#efefef</color>
     <string name="textoPrincipal">Explora el mundo con nosotros</string>
     <string name="iniciar">Iniciar</string>
+    <string name="mapa">Mapa</string>
+    <string name="lugaresTuristicos">Lugares Turísticos</string>
+    <string name="lugaresVisitados">Lugares Visitados</string>
+    <string name="lugaresFavoritos">Lugares Favoritos</string>
+    <string name="configuracion">Configuración</string>
 </resources>

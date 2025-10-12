@@ -15,5 +15,6 @@
     <string name="favorito">Añadir a Favoritos</string>
     <string name="visitado">Añadir a Visitados</string>
     <string name="lugar_imagen">Imagen del lugar</string>
-
+    <string name="txtCoquimbo">Coquimbo</string>
+    <string name="txtLaserena">La Serena</string>
 </resources>

@@ -62,7 +62,7 @@
                             android:layout_alignParentBottom="true"
                             android:background="#AA000000"
                             android:padding="8dp"
-                            android:text="La Serena"
+                            android:text="@string/txtLaserena"
                             android:textColor="@android:color/white"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -98,7 +98,7 @@
                             android:layout_alignParentBottom="true"
                             android:background="#AA000000"
                             android:padding="8dp"
-                            android:text="Coquimbo"
+                            android:text="@string/txtCoquimbo"
                             android:textColor="@android:color/white"
                             android:textSize="18sp"
                             android:textStyle="bold" />

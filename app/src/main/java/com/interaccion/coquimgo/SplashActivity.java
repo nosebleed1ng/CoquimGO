@@ -26,7 +26,7 @@ public class SplashActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(SplashActivity.this, LugaresTuristicosActivity.class);
                 startActivity(intent);
-                finish(); // Opcional: cierra el Splash para no volver con "back"
+                finish(); // metodo para no poder volver con el boton atras a splashactivity
             }
         });
     }

@@ -16,15 +16,14 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Inicializar ViewBinding
         binding = ActivitySplashBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // Botón Iniciar → abre LugaresTuristicosActivity
+        // Botón Iniciar abre LugaresTuristicosActivity
         binding.btnIniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                Intent intent = new Intent(SplashActivity.this, LugaresTuristicosActivity.class);
                 startActivity(intent);
                 finish(); // metodo para no poder volver con el boton atras a splashactivity
             }

@@ -20,7 +20,7 @@ public class LugaresTuristicosActivity extends AppCompatActivity
     private NavigationView navigationView;
     private Toolbar toolbar;
     private CardView cardLaSerena, cardCoquimbo;
-
+//webon
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

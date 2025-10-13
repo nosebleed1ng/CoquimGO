@@ -24,7 +24,7 @@ public class SplashActivity extends AppCompatActivity {
         binding.btnIniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SplashActivity.this, LugaresTuristicosActivity.class);
+                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish(); // metodo para no poder volver con el boton atras a splashactivity
             }

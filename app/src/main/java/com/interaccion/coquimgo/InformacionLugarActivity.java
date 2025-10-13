@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class InformacionLugarActivity extends AppCompatActivity {
-//declaramos los objetos
+    //declaramos los objetos
     private ImageView imgLugar;
     private TextView txtNombreLugar, txtDescripcion, txtUbicacion, txtHorarios, txtCostos;
     private Button btnVolver;
@@ -64,7 +64,4 @@ public class InformacionLugarActivity extends AppCompatActivity {
 
         }
     }
-
-
 }
-

@@ -15,6 +15,11 @@
     <string name="favorito">Añadir a Favoritos</string>
     <string name="visitado">Añadir a Visitados</string>
     <string name="lugar_imagen">Imagen del lugar</string>
-    <string name="txtCoquimbo">Coquimbo</string>
-    <string name="txtLaserena">La Serena</string>
+    <string name="txtcruzdeltercermilenio">Cruz Del Tercer Milenio</string>
+    <string name="txtfuertelambert">Fuerte Lambert</string>
+    <string name="txtpueblitopeñuelas">Pueblito Peñuelas</string>
+    <string name="txtavenidadelmar">Avenida Del Mar</string>
+    <string name="txtlamezquita">La Mezquita</string>
+    <string name="txtelfaro">El Faro</string>
+    <string name="txtparquejapones">Parque Japones</string>
 </resources>

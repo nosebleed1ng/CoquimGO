@@ -19,7 +19,7 @@ public class LugaresTuristicosActivity extends AppCompatActivity
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private Toolbar toolbar;
-    private CardView cardLaSerena, cardCoquimbo;
+    private CardView cardfuertelambert, cardcruztercermilenio, cardpueblitopeñuelas, cardavenidadelmar, cardlamezquita, cardelfaro, cardparquejapones;
 //webon
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +33,13 @@ public class LugaresTuristicosActivity extends AppCompatActivity
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigationView);
 
-        cardLaSerena = findViewById(R.id.cardLaSerena);
-        cardCoquimbo = findViewById(R.id.cardCoquimbo);
+        cardfuertelambert = findViewById(R.id.cardfuertelambert);
+        cardcruztercermilenio = findViewById(R.id.cardcruztercermilenio);
+        cardpueblitopeñuelas = findViewById(R.id.cardpueblitopeñuelas);
+        cardavenidadelmar = findViewById(R.id.cardavenidadelmar);
+        cardlamezquita = findViewById(R.id.cardlamezquita);
+        cardelfaro = findViewById(R.id.cardelfaro);
+        cardparquejapones = findViewById(R.id.cardparquejapones);
 
         // navigation drawer dentro del toolbar para abrirlo y cerrarlo
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -46,8 +51,13 @@ public class LugaresTuristicosActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         // acciones de las cardviews de coquimbo y serena
-        cardLaSerena.setOnClickListener(v -> abrirInformacionLugar("La Serena"));
-        cardCoquimbo.setOnClickListener(v -> abrirInformacionLugar("Coquimbo"));
+        cardfuertelambert.setOnClickListener(v -> abrirInformacionLugar("Fuerte Lambert"));
+        cardcruztercermilenio.setOnClickListener(v -> abrirInformacionLugar("Cruz del tercer milenio"));
+        cardpueblitopeñuelas.setOnClickListener(v -> abrirInformacionLugar("Pueblito Peñuelas"));
+        cardavenidadelmar.setOnClickListener(v -> abrirInformacionLugar("Avenida del mar"));
+        cardlamezquita.setOnClickListener(v -> abrirInformacionLugar("La mezquita"));
+        cardelfaro.setOnClickListener(v -> abrirInformacionLugar("El faro"));
+        cardparquejapones.setOnClickListener(v -> abrirInformacionLugar("Parque japones"));
     }
 
     //metodo para abrir informacion del lugar

@@ -1,106 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".InformacionLugarActivity">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ImageView
+        android:id="@+id/imglugar"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/txtombreLugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/txtdescripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"/>
 
-        <!-- boton para volver -->
+    <TextView
+        android:id="@+id/txtubicacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/txthorarios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/txtcostos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Botones juntos en fila -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="12dp">
+
         <Button
-            android:id="@+id/btnVolver"
+            android:id="@+id/btnvolver"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Volver"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/azulOscuro"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            android:layout_marginEnd="12dp"/>
 
-        <!-- imagen del lugar -->
-        <ImageView
-            android:id="@+id/imgLugar"
-            android:layout_width="0dp"
-            android:layout_height="220dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintTop_toBottomOf="@id/btnVolver"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp" />
-
-        <!-- nombre -->
-        <TextView
-            android:id="@+id/txtNombreLugar"
+        <Button
+            android:id="@+id/btnmarcarvisitado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nombre del Lugar"
-            android:textColor="@color/azulOscuro"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@id/imgLugar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp" />
-
-        <!-- descripción -->
-        <TextView
-            android:id="@+id/txtDescripcion"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Descripción del lugar."
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@id/txtNombreLugar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <!-- ubicación -->
-        <TextView
-            android:id="@+id/txtUbicacion"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Ubicación:"
-            android:textSize="15sp"
-            android:textColor="@color/black"
-            android:layout_marginTop="12dp"
-            app:layout_constraintTop_toBottomOf="@id/txtDescripcion"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <!-- jorarios -->
-        <TextView
-            android:id="@+id/txtHorarios"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Horarios:"
-            android:textSize="15sp"
-            android:textColor="@color/black"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@id/txtUbicacion"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <!-- costos -->
-        <TextView
-            android:id="@+id/txtCostos"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Costos:"
-            android:textSize="15sp"
-            android:textColor="@color/black"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@id/txtHorarios"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+            android:text="Marcar como visitado"/>
+    </LinearLayout>
+</LinearLayout>

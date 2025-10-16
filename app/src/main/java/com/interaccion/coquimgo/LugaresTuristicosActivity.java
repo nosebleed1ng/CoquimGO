@@ -3,6 +3,10 @@ package com.interaccion.coquimgo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Spinner;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,20 +23,24 @@ public class LugaresTuristicosActivity extends AppCompatActivity
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private Toolbar toolbar;
-    private CardView cardfuertelambert, cardcruztercermilenio, cardpueblitopeñuelas, cardavenidadelmar, cardlamezquita, cardelfaro, cardparquejapones;
-//webon
+    private Spinner spinnerFiltro;
+
+    private CardView cardfuertelambert, cardcruztercermilenio, cardpueblitopeñuelas,
+            cardavenidadelmar, cardlamezquita, cardelfaro, cardparquejapones;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lugares_turisticos);
 
-        // referencias del xml
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigationView);
+        spinnerFiltro = findViewById(R.id.spinnerFiltro);
 
+        // Inicializar cards
         cardfuertelambert = findViewById(R.id.cardfuertelambert);
         cardcruztercermilenio = findViewById(R.id.cardcruztercermilenio);
         cardpueblitopeñuelas = findViewById(R.id.cardpueblitopeñuelas);
@@ -41,7 +49,6 @@ public class LugaresTuristicosActivity extends AppCompatActivity
         cardelfaro = findViewById(R.id.cardelfaro);
         cardparquejapones = findViewById(R.id.cardparquejapones);
 
-        // navigation drawer dentro del toolbar para abrirlo y cerrarlo
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawerLayout, toolbar,
                 R.string.open_nav, R.string.close_nav);
@@ -50,7 +57,7 @@ public class LugaresTuristicosActivity extends AppCompatActivity
 
         navigationView.setNavigationItemSelectedListener(this);
 
-        // acciones de las cardviews de coquimbo y serena
+        // Clicks de cada card
         cardfuertelambert.setOnClickListener(v -> abrirInformacionLugar("Fuerte Lambert"));
         cardcruztercermilenio.setOnClickListener(v -> abrirInformacionLugar("Cruz del tercer milenio"));
         cardpueblitopeñuelas.setOnClickListener(v -> abrirInformacionLugar("Pueblito Peñuelas"));
@@ -58,28 +65,77 @@ public class LugaresTuristicosActivity extends AppCompatActivity
         cardlamezquita.setOnClickListener(v -> abrirInformacionLugar("La mezquita"));
         cardelfaro.setOnClickListener(v -> abrirInformacionLugar("El faro"));
         cardparquejapones.setOnClickListener(v -> abrirInformacionLugar("Parque japones"));
+
+        // 🔹 Configurar filtro
+        spinnerFiltro.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String seleccion = parent.getItemAtPosition(position).toString();
+                aplicarFiltro(seleccion);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) { }
+        });
     }
 
-    //metodo para abrir informacion del lugar
+    private void aplicarFiltro(String filtro) {
+        // Mostrar todo por defecto
+        mostrarTodas();
+
+        switch (filtro) {
+            case "Playa":
+                ocultarExcepto(cardavenidadelmar);
+                break;
+            case "Cultural":
+                ocultarExcepto(cardfuertelambert, cardcruztercermilenio, cardpueblitopeñuelas);
+                break;
+            case "Religioso":
+                ocultarExcepto(cardlamezquita);
+                break;
+            case "Parques":
+                ocultarExcepto(cardparquejapones);
+                break;
+        }
+    }
+
+    private void mostrarTodas() {
+        cardfuertelambert.setVisibility(View.VISIBLE);
+        cardcruztercermilenio.setVisibility(View.VISIBLE);
+        cardpueblitopeñuelas.setVisibility(View.VISIBLE);
+        cardavenidadelmar.setVisibility(View.VISIBLE);
+        cardlamezquita.setVisibility(View.VISIBLE);
+        cardelfaro.setVisibility(View.VISIBLE);
+        cardparquejapones.setVisibility(View.VISIBLE);
+    }
+
+    private void ocultarExcepto(CardView... visibles) {
+        CardView[] todas = {
+                cardfuertelambert, cardcruztercermilenio, cardpueblitopeñuelas,
+                cardavenidadelmar, cardlamezquita, cardelfaro, cardparquejapones
+        };
+        for (CardView card : todas) card.setVisibility(View.GONE);
+        for (CardView card : visibles) card.setVisibility(View.VISIBLE);
+    }
+
     private void abrirInformacionLugar(String nombreLugar) {
         Intent intent = new Intent(this, InformacionLugarActivity.class);
         intent.putExtra("nombreLugar", nombreLugar);
+        intent.putExtra("origen", "lugares_turisticos");
         startActivity(intent);
     }
 
-//navigation drawer
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        drawerLayout.closeDrawer(GravityCompat.START);
-        return true;
-    }
-    public void onBackPressedDispatcher() {
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+        if (id == R.id.nav_lugares_visitados) {
+            Intent intent = new Intent(this, LugaresVisitadosActivity.class);
+            startActivity(intent);
             drawerLayout.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
+            return true;
         }
+        return false;
     }
 }
+

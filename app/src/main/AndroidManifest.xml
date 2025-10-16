@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CoquimGO">
         <activity
+            android:name=".LugaresVisitadosActivity"
+            android:exported="false" />
+        <activity
             android:name=".InformacionLugarActivity"
             android:exported="true" />
         <activity

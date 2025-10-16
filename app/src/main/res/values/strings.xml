@@ -22,4 +22,12 @@
     <string name="txtlamezquita">La Mezquita</string>
     <string name="txtelfaro">El Faro</string>
     <string name="txtparquejapones">Parque Japones</string>
+    <string-array name="opciones_filtro">
+        <item>Todos</item>
+        <item>Playa</item>
+        <item>Cultural</item>
+        <item>Religioso</item>
+        <item>Parques</item>
+    </string-array>
+
 </resources>

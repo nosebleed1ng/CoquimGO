@@ -17,7 +17,11 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/azulOscuro"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+<<<<<<< HEAD
             app:title="@string/lugaresVisitados" />
+=======
+            app:title="Lugares Visitados" />
+>>>>>>> 517a9a7cfb7dc8fae6aa412ddc4fa11cae9b6a65
 
         <Spinner
             android:id="@+id/spinnerFiltro"
@@ -75,6 +79,10 @@
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
+<<<<<<< HEAD
+=======
+                <!-- cardview de la cruz del tercer milenio -->
+>>>>>>> 517a9a7cfb7dc8fae6aa412ddc4fa11cae9b6a65
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardcruztercermilenio"
                     android:layout_width="match_parent"
@@ -110,6 +118,11 @@
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
+<<<<<<< HEAD
+=======
+                <!-- cardview plantilla -->
+
+>>>>>>> 517a9a7cfb7dc8fae6aa412ddc4fa11cae9b6a65
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardpueblitopeñuelas"
                     android:layout_width="match_parent"
@@ -145,6 +158,11 @@
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
+<<<<<<< HEAD
+=======
+                <!-- cardview plantilla -->
+
+>>>>>>> 517a9a7cfb7dc8fae6aa412ddc4fa11cae9b6a65
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardavenidadelmar"
                     android:layout_width="match_parent"
@@ -285,6 +303,10 @@
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
+<<<<<<< HEAD
+=======
+                <!-- Aquí se agregarán las CardView dinámicamente -->
+>>>>>>> 517a9a7cfb7dc8fae6aa412ddc4fa11cae9b6a65
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

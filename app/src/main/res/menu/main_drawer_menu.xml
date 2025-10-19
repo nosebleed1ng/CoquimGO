@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+<<<<<<< HEAD
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_mapa"
@@ -18,3 +19,23 @@
             android:title="@string/configuracion" />
     </group>
 </menu>
+=======
+<group android:checkableBehavior="single">
+    <item
+        android:id="@+id/nav_mapa"
+        android:title="@string/mapa"/>
+    <item
+        android:id="@+id/nav_lugares_turisticos"
+        android:title="@string/lugaresTuristicos"/>
+    <item
+        android:id="@+id/nav_lugares_visitados"
+        android:title="@string/lugaresVisitados"/>
+    <item
+        android:id="@+id/nav_lugares_favoritos"
+        android:title="@string/lugaresFavoritos"/>
+    <item
+        android:id="@+id/nav_configuracion"
+        android:title="@string/configuracion"/>
+</group>
+</menu>
+>>>>>>> 517a9a7cfb7dc8fae6aa412ddc4fa11cae9b6a65

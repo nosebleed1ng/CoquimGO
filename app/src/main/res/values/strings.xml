@@ -1,11 +1,17 @@
 <resources>
+<<<<<<< HEAD
     <!-- Nombre y colores -->
+=======
+>>>>>>> 517a9a7cfb7dc8fae6aa412ddc4fa11cae9b6a65
     <string name="app_name">CoquimGO</string>
     <color name="morado">#9a0ca4</color>
     <color name="azulOscuro">#253f66</color>
     <color name="grisClaro">#efefef</color>
+<<<<<<< HEAD
 
     <!-- Textos generales -->
+=======
+>>>>>>> 517a9a7cfb7dc8fae6aa412ddc4fa11cae9b6a65
     <string name="textoPrincipal">Explora el mundo con nosotros</string>
     <string name="iniciar">Iniciar</string>
     <string name="mapa">Mapa</string>
@@ -17,6 +23,7 @@
     <string name="close_nav">Cerrar menú</string>
     <string name="favorito">Añadir a Favoritos</string>
     <string name="visitado">Añadir a Visitados</string>
+<<<<<<< HEAD
     <string name="volver">Volver</string>
     <string name="eliminarFavorito">Eliminar de Favoritos</string>
     <string name="eliminarVisitado">Eliminar de Visitados</string>
@@ -100,3 +107,22 @@ Podrás explorar lugares, marcarlos como visitados o favoritos, y configurar el 
 
 </resources>
 
+=======
+    <string name="lugar_imagen">Imagen del lugar</string>
+    <string name="txtcruzdeltercermilenio">Cruz Del Tercer Milenio</string>
+    <string name="txtfuertelambert">Fuerte Lambert</string>
+    <string name="txtpueblitopeñuelas">Pueblito Peñuelas</string>
+    <string name="txtavenidadelmar">Avenida Del Mar</string>
+    <string name="txtlamezquita">La Mezquita</string>
+    <string name="txtelfaro">El Faro</string>
+    <string name="txtparquejapones">Parque Japones</string>
+    <string-array name="opciones_filtro">
+        <item>Todos</item>
+        <item>Playa</item>
+        <item>Cultural</item>
+        <item>Religioso</item>
+        <item>Parques</item>
+    </string-array>
+
+</resources>
+>>>>>>> 517a9a7cfb7dc8fae6aa412ddc4fa11cae9b6a65

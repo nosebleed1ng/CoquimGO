@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.interaccion.coquimgo">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CoquimGO"
+        tools:targetApi="31">
+
+        <!-- 🌐 Selección de idioma -->
+        <activity
+            android:name=".SeleccionIdiomaActivity"
+            android:exported="true"
+            android:label="@string/seleccionar_idioma"
+            android:theme="@style/Theme.CoquimGO" />
+
+        <!-- ⚙️ Configuración -->
+        <activity
+            android:name=".ConfiguracionActivity"
+            android:exported="true"
+            android:label="@string/configuracion"
+            android:theme="@style/Theme.CoquimGO" />
+
+        <!-- ❤️ Lugares Favoritos -->
+        <activity
+            android:name=".LugaresFavoritosActivity"
+            android:exported="true"
+            android:label="@string/lugaresFavoritos"
+            android:theme="@style/Theme.CoquimGO" />
+
+        <!-- 💙 Lugares Visitados -->
+        <activity
+            android:name=".LugaresVisitadosActivity"
+            android:exported="true"
+            android:label="@string/lugaresVisitados"
+            android:theme="@style/Theme.CoquimGO" />
+
+        <!-- 📍 Información del Lugar -->
+        <activity
+            android:name=".InformacionLugarActivity"
+            android:exported="true"
+            android:label="@string/lugaresTuristicos"
+            android:theme="@style/Theme.CoquimGO" />
+
+        <!-- 🏖 Lugares Turísticos -->
+        <activity
+            android:name=".LugaresTuristicosActivity"
+            android:exported="true"
+            android:label="@string/lugaresTuristicos"
+            android:theme="@style/Theme.CoquimGO" />
+
+        <!-- 🏠 Pantalla principal (Navigation Drawer) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.CoquimGO" />
+
+        <!-- 💫 Pantalla de inicio (Splash) -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.CoquimGO">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>
